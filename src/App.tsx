@@ -11,6 +11,7 @@ function App() {
             let crd = pos.coords;
             let answer = [crd.latitude, crd.longitude];
             locationData = answer;
+            getWeather();
         }, () => {alert("You must share your location to use this app.")})
     }
     let getWeather = function() {
@@ -29,8 +30,7 @@ function App() {
     return (
       <div>
           <p>So anyways かたぎりは電気狐の夢を見るか？</p>
-          <button onClick={getLocationData}>Get Location</button><br></br>
-          <button onClick={getWeather}>Get Weather</button><br></br>
+          <button onClick={getLocationData}>Get Weather</button><br></br>
           <table>
               <tbody>
               <tr>
